@@ -7,7 +7,6 @@ public class Board {
 	
 	// Constructor 
 	public Board(int rows, int cols) {
-		int count = 1;
 		this.table = new String[rows][cols];
 		for (int i = 0; i < this.table.length; i++) {
 			for (int j = 0; j < this.table[i].length; j++) {
@@ -22,8 +21,14 @@ public class Board {
 	public String[][] getBoard() { return table; }
 	
 	// changeValue method
-	public void changeValue(int row, int col, String value) {
-		this.table[row][col] = value;
+	public boolean changeValue(int col, String value) {
+		for (int i = this.table.length - 1; i >= 0; i-- ) {
+			if (this.table[i][col] == " ") {
+				this.table[i][col] = value;
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	// toString method
@@ -35,7 +40,7 @@ public class Board {
 		
 		for (int i = 0; i < this.table[0].length; i++) {
 			str += "| ";
-			str += i;
+			str += i + 1;
 			str += " ";
 		}
 		

@@ -18,4 +18,9 @@ public class Bot {
 	public void setTeam(String team) { this.team = team; }
 	public void setName(String name) { this.name = name; }
 	
+	// pickNum method
+	public int pickNum(int max) {
+		return (int) (Math.random() * max);
+	}
+	
 }

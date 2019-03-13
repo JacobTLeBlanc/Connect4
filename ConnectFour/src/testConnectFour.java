@@ -3,8 +3,11 @@ public class testConnectFour {
 
 	public static void main(String[] args) {
 		
-		Board brd = new Board(6, 7);
-		System.out.print(brd);
+		Game gm = new Game();
+		for (int i = 0; i < 10; i++) {
+			gm.takeTurn(gm.getBot());
+			gm.takeTurn(gm.getPlayer());
+		}
 
 	}
 
