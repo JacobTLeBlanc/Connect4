@@ -1,3 +1,9 @@
+/* -
+ * Player - Object
+ * -
+ * A simple class used to keep of the user
+ * -
+ */
 
 public class Player {
 	// Instance variables
